@@ -16,7 +16,7 @@ app.use("/users", userRoutes);
 
 
 mongoose
-  .connect(process.env.CONNECTION_URL||'mongodb://localhost:27017/photogallery', {
+  .connect(process.env.MONGODB_URI||'mongodb://localhost:27017/photogallery', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
