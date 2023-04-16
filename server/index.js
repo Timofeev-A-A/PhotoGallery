@@ -16,12 +16,12 @@ app.use("/users", userRoutes);
 
 
 mongoose
-  .connect(process.env.MONGODB_URI||'mongodb://localhost:27017/photogallery', {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    app.listen(process.env.PORT||'3300', () => console.log(`Server running`));
+    app.listen(process.env.PORT, () => console.log(`Server running`));
   })
   .catch((error) => {
     console.error(error.message);
